@@ -2,13 +2,28 @@ program CurDate;
 
 uses
   Forms,
+  Windows,
   main in 'main.pas' {Form1};
 
 {$R *.res}
 
+var
+  Mutex:THandle;
 begin
-  Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
-  //Application.ShowMainForm := false;
-  Application.Run;
+
+  Mutex := CreateMutex(nil,False,'CurrDate');
+
+  if GetLastError<>ERROR_ALREADY_EXISTS then
+  begin
+      Application.Initialize;
+      Application.CreateForm(TForm1, Form1);
+      //Application.ShowMainForm := false;
+      Application.Run;
+  end
+  else
+  begin
+    MessageBox(0,'系统已经运行，按下Win+F2在当前位置输入日期','提示',MB_OK or MB_ICONWARNING)
+  end;
+
+  ReleaseMutex(Mutex);
 end.

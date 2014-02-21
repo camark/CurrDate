@@ -108,6 +108,7 @@ end;
 
 procedure TForm1.Exit1Click(Sender: TObject);
 begin
+  GlobalDeleteAtom(Hotkey_id+$C000);
   UnregisterHotKey(handle,Hotkey_id);
   Application.Terminate;
 end;
