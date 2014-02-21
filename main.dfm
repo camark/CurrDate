@@ -65,6 +65,13 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
+  object Label3: TLabel
+    Left = 472
+    Top = 152
+    Width = 97
+    Height = 17
+    Caption = 'QQ:787935636'
+  end
   object grp1: TGroupBox
     Left = 32
     Top = 24

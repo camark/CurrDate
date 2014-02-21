@@ -23,6 +23,7 @@ type
     Exit1: TMenuItem;
     tmr1: TTimer;
     chk_autorun: TCheckBox;
+    Label3: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnOKClick(Sender: TObject);
