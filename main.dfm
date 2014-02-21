@@ -109,6 +109,15 @@ object Form1: TForm1
     OnClick = btnOKClick
     Kind = bkOK
   end
+  object chk_autorun: TCheckBox
+    Left = 472
+    Top = 112
+    Width = 113
+    Height = 17
+    Caption = #24320#26426#33258#21160#36816#34892
+    TabOrder = 2
+    OnClick = chk_autorunClick
+  end
   object trycn1: TTrayIcon
     Active = True
     Hint = #25353#19979'Win+F2'#33719#21462#24403#21069#26085#26399
@@ -142,8 +151,8 @@ object Form1: TForm1
     Top = 88
   end
   object pm1: TPopupMenu
-    Left = 480
-    Top = 152
+    Left = 464
+    Top = 208
     object Config1: TMenuItem
       Caption = 'Config'
       OnClick = Config1Click
@@ -152,5 +161,11 @@ object Form1: TForm1
       Caption = 'Exit'
       OnClick = Exit1Click
     end
+  end
+  object tmr1: TTimer
+    Interval = 3000
+    OnTimer = tmr1Timer
+    Left = 528
+    Top = 168
   end
 end

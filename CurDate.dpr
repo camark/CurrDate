@@ -9,6 +9,6 @@ uses
 begin
   Application.Initialize;
   Application.CreateForm(TForm1, Form1);
-  Application.ShowMainForm := false;
+  //Application.ShowMainForm := false;
   Application.Run;
 end.
