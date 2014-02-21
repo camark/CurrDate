@@ -22,7 +22,8 @@ begin
   end
   else
   begin
-    MessageBox(0,'系统已经运行，按下Win+F2在当前位置输入日期','提示',MB_OK or MB_ICONWARNING)
+    MessageBox(Application.Handle,'系统已经运行，按下Win+F2在当前位置输入日期','提示',MB_OK or MB_ICONWARNING);
+    Application.Terminate;
   end;
 
   ReleaseMutex(Mutex);
